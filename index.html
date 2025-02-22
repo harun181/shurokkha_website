@@ -2,177 +2,254 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/71258d5dfb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>সুরক্ষা : কোভিড-১৯ ভ্যাকসিনের জন্য নিবন্ধন করুন</title>
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+    <!-- Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Add Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add custom styles -->
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-
-    <!--Header Start-->    
-        <header>
-            <img src="img/logo.png" class="img-fluid" alt="Logo">
-            <nav>
-                <a class="active" href="#">হোম</a>
-                <a href="#">নিবন্ধন</a>
-                <a href="#">নিবন্ধন (পাসপোর্ট)</a>
-                <a href="#">নিবন্ধন স্ট্যাটাস</a>
-                <a href="#">টিকা কার্ড</a>
-                <a href="#">টিকা সনদ</a>
-                <a href="#">টিকা সনদ যাচাই</a>
-                <a href="#">সহায়িকা</a>
-                <a href="#">জিজ্ঞাসা</a>
-                <a href="#" class="btn nohover btn-danger">English</a>
-            </nav>
-        </header>
-    <!--Header End--> 
-
-    <!--Section 01 Start--> 
-        <section class="sec01">
-            <div class="box">
-                <div class="box01">
-                    <img src="img/people.png">
-                    <h1 style="font-weight: bold;">ভ্যাকসিনের জন্য নিবন্ধন করুন</h1>
-                    <br>
-                    <h5>নিবন্ধনের সময় প্রয়োজন হবে</h5>
-                    <img src="img/nid.png" alt="">
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo Section -->
+                <div class="flex items-center space-x-4">
+                    <img src="images/logo.png" alt="Surokkha" class="h-12">
                 </div>
-                <div class="box02">
-                    <div class="tik">
-                        <img src="img/tik.png" alt="">
-                        <h3>নিবন্ধন স্ট্যাটাস</h3>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-red-600 hover:text-red-600 border-b-2 border-red-600">হোম</a>
+                    <a href="tika.html" class="text-gray-700 hover:text-red-600">নিবন্ধন</a>
+                    <a href="tika.html" class="text-gray-700 hover:text-red-600">নিবন্ধন (পাসপোর্ট)</a>
+                    <a href="#" class="text-gray-700 hover:text-red-600">নিবন্ধন স্ট্যাটাস</a>
+                    <a href="tika.html" class="text-gray-700 hover:text-red-600">টিকা কার্ড</a>
+                    <a href="certificate.html" class="text-gray-700 hover:text-red-600">টিকা সনদ</a>
+                    <a href="certificate.html" class="text-gray-700 hover:text-red-600">টিকা সনদ যাচাই</a>
+                    <a href="#" class="text-gray-700 hover:text-red-600">সহায়িকা</a>
+                    <a href="#" class="text-gray-700 hover:text-red-600">জিজ্ঞাসা</a>
+                    <a href="#" class="bg-red-600 text-white px-4 py-2 rounded">English</a>
+                </div>
+
+
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50">
+                    <div class="p-4 border-b">
+                        <button onclick="toggleMenu()" class="float-right text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="tik">
-                        <img src="img/card.png" alt="">
-                        <h3>টিকা কার্ড সংগ্রহ</h3>
-                    </div>
-                    <div class="tik">
-                        <img src="img/certificate.png" alt="">
-                        <h3>টিকা সনদ সংগ্রহ</h3>
-                    </div>
-                    <div class="tik">
-                        <img src="img/info.png" alt="">
-                        <h3>সচরাচর জিজ্ঞাসা</h3>
+                    <div class="flex flex-col p-4">
+                        <a href="#" class="py-2 text-red-600 border-b-2 border-red-600">হোম</a>
+                        <a href="tika.html" class="py-2 text-gray-700 hover:text-red-600">নিবন্ধন</a>
+                        <a href="tika.html" class="py-2 text-gray-700 hover:text-red-600">নিবন্ধন (পাসপোর্ট)</a>
+                        <a href="#" class="py-2 text-gray-700 hover:text-red-600">নিবন্ধন স্ট্যাটাস</a>
+                        <a href="tika.html" class="py-2 text-gray-700 hover:text-red-600">টিকা কার্ড</a>
+                        <a href="certificate.html" class="py-2 text-gray-700 hover:text-red-600">টিকা সনদ</a>
+                        <a href="certificate.html" class="py-2 text-gray-700 hover:text-red-600">টিকা সনদ যাচাই</a>
+                        <a href="#" class="py-2 text-gray-700 hover:text-red-600">সহায়িকা</a>
+                        <a href="#" class="py-2 text-gray-700 hover:text-red-600">জিজ্ঞাসা</a>
+                        <a href="#" class="bg-red-600 text-white px-4 py-2 rounded">English</a>
                     </div>
                 </div>
             </div>
-        </section>
-    <!--Section 01 END--> 
+        </div>
+    </nav>
 
-    <!--Section 02 Start--> 
-        <section class="sec02">
-            <div class="call">
-                <img src="img/call.png" alt="">
-                <p>হটলাইন</p>
+
+    <!-- Hero Section -->
+    <section class="bg-[url('images/banner.jpg')] min-h-[500px] bg-no-repeat bg-cover">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Registration Card -->
+                <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="text-blue-700 mb-4">
+                            <img src="images/people.png" alt="">
+                        </div>
+                        <h2 class="text-2xl font-bold text-blue-900 mb-4">ভ্যাকসিনের জন্য নিবন্ধন করুন</h2>
+                        <p class="text-gray-600 mb-6">নিবন্ধনের সময় প্রয়োজন হবে</p>
+                        <div class="flex flex-col items-center justify-center space-x-4">
+                            <img src="images/nid.png" alt="">                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status Links -->
+                <div class="flex flex-col space-y-4 w-80">
+                    <a href="#" class="bg-white p-4 rounded-lg shadow flex items-center space-x-3 hover:shadow-lg transition">
+                        <img src="images/tik.png" alt="">
+                        <span class="text-gray-800">নিবন্ধন স্ট্যাটাস</span>
+                    </a>
+                    <a href="#" class="bg-white p-8 rounded-lg shadow flex items-center space-x-3 hover:shadow-lg transition">
+                        <img src="images/card.png" alt="">
+                        <span class="text-gray-800">টিকা কার্ড সংগ্রহ</span>
+                    </a>
+                    <a href="#" class="bg-white p-8 rounded-lg shadow flex items-center space-x-3 hover:shadow-lg transition">
+                        <img src="images/certificate.png" alt="">
+                        <span class="text-gray-800">টিকা সনদ সংগ্রহ</span>
+                    </a>
+                    <a href="#" class="bg-white p-8 rounded-lg shadow flex items-center space-x-3 hover:shadow-lg transition">
+                        <img src="images/info.png" alt="">
+                        <span class="text-gray-800">সচরাচর জিজ্ঞাসা</span>
+                    </a>
+                </div>
             </div>
-            <div class="call">
-                <h5>৩৩৩</h5>
-                <p>জাতীয় কল সেন্টার</p>
-            </div>
-            <div class="call">
-                <h5>১৬২৬৩</h5>
-                <p>স্বাস্থ্য বাতায়ন</p>
-            </div>
-            <div class="call">
-                <h5>১০৬৬৫</h5>
-                <p>আইইডিসিআর </p>
-            </div>
-            <div class="call">
-                <h5>০৯৬৬৬৭৭৭২২২</h5>
-                <p>কোভিড-১৯ টেলিহেলথ</p>
-            </div>
-            <div class="call">
-                <img src="img/call.png" alt="">
-                <p>সকল কল সেন্টার</p>
-            </div>
-        </section>
-    <!--Section 02 End--> 
+        </div>
+    </section>
+
+
+        <!-- Statistics Bar -->
+        <div class="container mx-auto pt-[3rem] border-b-2 w-[60%] pb-5">
+            <div class="flex flex-wrap justify-center items-center md:divide-x divide-gray-300">
+                <!-- Hotline -->
+                <div class="flex flex-col items-center justify-center px-6 space-x-2">
+                    <img src="images/call.png" alt="Hotline" class="w-6 h-6">
+                    <span class="text-gray-700">হটলাইন</span>
+                </div>
     
-    <!--Section 03 Start-->
-        <section class="sec03">
-            <div class="covid">
-                <h2 style="font-weight: bold;">কোভিড-১৯ করোনা ভ্যাকসিন গ্রহণের প্রক্রিয়া</h2>
-            </div>
-            <div class="card">
-                <div class="card1">
-                    <img src="img/check.png" alt="">
-                    <h3>অনলাইনে নিবন্ধন</h3>
-                    <p>প্রথমে এই পোর্টালের মাধ্যমে জাতীয় পরিচয়পত্র ও সঠিক মোবাইল নম্বর যাচাইপূর্বক অনলাইনে নিবন্ধন সম্পন্ন করবেন।</p>
+                <!-- National Call Center -->
+                <div class="flex items-center px-6">
+                    <div class="flex flex-col items-center justify-center">
+                        <span class="text-gray-700">জাতীয় কল সেন্টার</span>
+                        <span class="text-blue-600 font-semibold">৩৩৩</span>
+                    </div>
                 </div>
-                <div class="card1">
-                    <img src="img/mail.png" alt="">
-                    <h3>SMS নোটিফিকেশন</h3>
-                    <p>অনলাইনে নিবন্ধন পরবর্তী তথ্য যাচাইপূর্বক পর্যায়ক্রমে টিকা প্রদানের তারিখ ও কেন্দ্রের নাম উল্লেখপূর্বক মুঠোফোনে খুদেবার্তা পাবেন।</p>
-                </div>
-                <div class="card1">
-                    <img src="img/cell.png" alt="">
-                    <h3>টিকা কেন্দ্রে টিকা গ্রহণ</h3>
-                    <p>মুঠোফোনে খুদেবার্তা প্রাপ্তি সাপেক্ষে টিকাকার্ড জাতীয় পরিচয়পত্র ও সম্মতিপত্রসহ নির্দিষ্ট তারিখে টিকাদান কেন্দ্রে স্ব-শরীরে উপস্থিত হয়ে কোভিড-১৯ টিকা গ্রহণ করবেন।</p>
-                </div>
-            </div>
-        </section>
-    <!--Section 03 End-->
     
-    <!--Section 04 Start-->
-        <section class="sec04">
-            <div class="app">
-                <p style="font-weight: bold; font-size: 18px;">অ্যাপ ডাউনলোড করুন</p>
-                <img src="img/google.png" alt="">
-            </div>           
-        </section>
-    <!--Section 04 End-->
+                <!-- Health Portal -->
+                <div class="flex items-center px-6">
+                    <div class="flex flex-col items-center justify-center">
+                        <span class="text-gray-700">স্বাস্থ্য পোর্টাল</span>
+                        <span class="text-blue-600 font-semibold">১৬২৬৩</span>
+                    </div>
+                </div>
+    
+                <!-- IEDCR -->
+                <div class="flex items-center px-6">
+                    <div class="flex flex-col items-center justify-center">
+                        <span class="text-gray-700">আইইডিসিআর</span>
+                        <span class="text-blue-600 font-semibold">১০৬৬৫</span>
+                    </div>
+                </div>
+    
+                <!-- Covid-19 Telehealth -->
+                <div class="flex items-center px-6">
+                    <div class="flex flex-col items-center justify-center">
+                        <span class="text-gray-700">কোভিড-১৯ টেলিহেলথ</span>
+                        <span class="text-blue-600 font-semibold">০৯৬৬৬৭৭৭২২২</span>
+                    </div>
+                </div>
+    
+                <!-- All Call Centers -->
+                <div class="flex flex-col items-center px-6 space-x-2">
+                    <img src="images/call.png" alt="Call Centers" class="w-6 h-6">
+                    <span class="text-gray-700">সকল কল সেন্টার</span>
+                </div>
+            </div>
+        </div>
 
-    <!--Section 05 Start-->
-        <section class="sec05">
-            <div class="muj">
-                <h2 style="font-weight: bold;">মুজিব ১০০</h2>
-            </div>
-            <div class="mujib">
-                <div class="mujib1">
-                    <img src="img/mujib100.png"  class="mujibpik">
-                    <p>মুজিব ১০০ পোর্টাল</p>
-                </div>
-                <div class="mujib2">
-                    <img src="img/google1.png" alt="">
-                    <p>মুজিব ১০০ অ্যান্ড্রয়েড অ্যাপ</p>
-                </div>
-                <div class="mujib2">
-                    <img src="img/app.png" alt="">
-                    <p>মুজিব ১০০ আইওএস অ্যাপ</p>
-                </div>
-            </div>
-        </section>
-    <!--Section 05 End-->
 
-    <!--Footer Start-->
-        <footer>
-            <div class="foot">
-                <div>
-                    <img src="https://surokkha.gov.bd/static/media/logo_white.8ef9a1c4.svg" alt="">
+    <!-- Registration Process Section -->
+    <section class="bg-white py-16 border-b-2">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Online Registration Card -->
+                <div class="text-center">
+                    <div class="mx-auto rounded-lg flex items-center justify-center mb-4">
+                        <div class="flex flex-col items-center">
+                            <img src="images/check.png" alt="">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">অনলাইনে নিবন্ধন</h3>
+                    <p class="text-gray-600 text-sm">প্রথম এই পোর্টালের মাধ্যমে জাতীয় পরিচয়পত্র ও সঠিক মোবাইল নম্বর যাচাইপূর্বক অনলাইনে নিবন্ধন সম্পন্ন করবেন।</p>
                 </div>
-                <div> 
-                   <p>
-                    প্রাইভেসি পলিসি <br>
-                    টার্মস অফ সার্ভিসেস <br>
-                    অন্যান্য সহযোগী প্রতিষ্ঠানসমূহ
-                   </p>
+
+                <!-- SMS Notification Card -->
+                <div class="text-center">
+                    <div class="mx-auto rounded-lg flex items-center justify-center mb-4">
+                        <img src="images/mail.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">SMS নোটিফিকেশন</h3>
+                    <p class="text-gray-600 text-sm">অনলাইনে নিবন্ধন পরবর্তী তথ্য যাচাইপূর্বক পর্যায়ক্রমে টিকা প্রদানের তারিখ ও কেন্দ্রের নাম উল্লেখপূর্বক পুনরায়ো পূনরায়ো পাবেন।</p>
                 </div>
-                <div>
-                    <p>কারিগরি সহায়তায় - তথ্য ও যোগাযোগ প্রযুক্তি অধিদপ্তর  </p>
-                    <img src="img/ict.png" alt="">
-                </div>
-                <div>
-                    <p>সহযোগী সংস্থাসমূহ - </p>
-                    <img src="img/org.png" alt="">
+
+                <!-- Vaccine Center Card -->
+                <div class="text-center">
+                    <div class="mx-auto rounded-lg flex items-center justify-center mb-4">
+                        <img src="images/cell.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">টিকা কেন্দ্রে টিকা গ্রহণ</h3>
+                    <p class="text-gray-600 text-sm">পূর্বঘোষিত পূনরায়ো প্রাপ্তি সাপেক্ষে টিকাকার্ড জাতীয় পরিচয়পত্র ও সমূতিপত্রের নিদিষ্ট তারিখে নির্ধারিত কেন্দ্র হ-শরীরে উপস্থিত হয়ে কোভিড-১৯ টিকা গ্রহণ করবেন।</p>
                 </div>
             </div>
-        </footer>
-    <!--Footer End-->
-        
-    </main>
+        </div>
+    </section>
+
+    <!-- App Download Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center gap-8 md:flex-row flex-col">
+                <h3 class="text-xl font-semibold">অ্যাপস ডাউনলোড করুন</h3>
+                <a href="#" class="hover:opacity-90 transition">
+                    <img src="images/google1.png" alt="Get it on Google Play" class="h-16">
+                </a>
+                <a href="#" class="hover:opacity-90 transition">
+                    <img src="images/app.png" alt="Get it on Google Play" class="h-16">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#F26640] py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between items-center md:flex-row flex-col">
+                <!-- Left Column -->
+                <div class="text-white  text-center">
+                    <div class="p-5 w-[13rem]">
+                        <img src="images/logo.png" alt="Logo">
+                    </div>
+                    <p class="font-medium">প্রযুক্তির সহায়তা</p>
+                    <p>ঢাকা তথ্য-সার্ভিসেস</p>
+                    <p>জনপ্রিয় সরকারী প্রতিষ্ঠানসমূহ</p>
+                </div>
+
+                <!-- Middle Column -->
+                <div class="text-center">
+                    <p class="text-white md:mb-4 mt-4">কারিগরি সহায়তায় - তথ্য ও যোগাযোগ প্রযুক্তি অধিদপ্তর</p>
+                    <div class="flex justify-center gap-2">
+                        <img src="images/ict.png" alt="ict-division">
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="text-center">
+                    <p class="text-white md:mb-4 mt-4">সৈবসেবী সহযোগিতায় -</p>
+                    <div class="flex justify-center gap-2">
+                        <img src="images/org.png" alt="Partner Organizations" class="h-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this script before closing body tag -->
+    <script src="index.js"></script>
 </body>
 </html>

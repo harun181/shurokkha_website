@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>টিকা সনদ - সুরক্ষা</title>
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+    <!-- Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Add Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add custom styles -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo Section -->
+                <div class="flex items-center space-x-4">
+                    <img src="images/logo.png" alt="Surokkha" class="h-12">
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-red-600">হোম</a>
+                    <a href="tika.html" class="text-gray-700 hover:text-red-600">নিবন্ধন</a>
+                    <a href="tika.html" class="text-gray-700 hover:text-red-600">নিবন্ধন (পাসপোর্ট)</a>
+                    <a href="#" class="text-gray-700 hover:text-red-600">নিবন্ধন স্ট্যাটাস</a>
+                    <a href="tika.html" class="text-gray-700 hover:text-red-600">টিকা কার্ড</a>
+                    <a href="certificate.html" class="text-red-600 hover:text-red-600 border-b-2 border-red-600">টিকা সনদ</a>
+                    <a href="certificate.html" class="text-gray-700 hover:text-red-600">টিকা সনদ যাচাই</a>
+                    <a href="#" class="text-gray-700 hover:text-red-600">সহায়িকা</a>
+                    <a href="#" class="text-gray-700 hover:text-red-600">জিজ্ঞাসা</a>
+                    <a href="#" class="bg-red-600 text-white px-4 py-2 rounded">English</a>
+                </div>
+
+
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50">
+                    <div class="p-4 border-b">
+                        <button onclick="toggleMenu()" class="float-right text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col p-4">
+                        <a href="index.html" class="py-2 text-gray-700 hover:text-red-600">হোম</a>
+                        <a href="tika.html" class="py-2 text-gray-700 hover:text-red-600">নিবন্ধন</a>
+                        <a href="tika.html" class="py-2 text-gray-700 hover:text-red-600">নিবন্ধন (পাসপোর্ট)</a>
+                        <a href="#" class="py-2 text-gray-700 hover:text-red-600">নিবন্ধন স্ট্যাটাস</a>
+                        <a href="tika.html" class="py-2 text-gray-700 hover:text-red-600">টিকা কার্ড</a>
+                        <a href="certificate.html" class="py-2 text-red-600 border-b-2 border-red-600">টিকা সনদ</a>
+                        <a href="certificate.html" class="py-2 text-gray-700 hover:text-red-600">টিকা সনদ যাচাই</a>
+                        <a href="#" class="py-2 text-gray-700 hover:text-red-600">সহায়িকা</a>
+                        <a href="#" class="py-2 text-gray-700 hover:text-red-600">জিজ্ঞাসা</a>
+                        <a href="#" class="bg-red-600 text-white px-4 py-2 rounded">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Title Banner -->
+        <div class="bg-coral-500 p-4 rounded-lg mb-8">
+            <h1 class="text-white text-2xl">কোভিড-১৯ ভ্যাকসিন কার্ড সংগ্রহ</h1>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Left Column -->
+            <div class="space-y-4">
+                <button class="w-full bg-gray-100 text-left p-4 rounded-lg hover:bg-gray-200">
+                    জাতীয় পরিচয়পত্র
+                </button>
+                <button class="w-full bg-gray-100 text-left p-4 rounded-lg hover:bg-gray-200">
+                    জন্ম নিবন্ধন সার্টিফিকেট
+                </button>
+                <button class="w-full bg-gray-100 text-left p-4 rounded-lg hover:bg-gray-200">
+                    পাসপোর্ট (বাংলাদেশি/বিদেশি)
+                </button>
+
+                <!-- Mobile App Image -->
+                <div class="mt-8">
+                    <img src="images/apk.webp" alt="Surokkha Mobile App" class="w-80 rounded-lg shadow-lg">
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="md:col-span-2">
+                <h2 class="text-xl mb-4">অনুগ্রহ করে মেনু থেকে শনাক্তকরণ অপশনটি নির্বাচন করুন</h2>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-lg font-medium mb-2">১. জাতীয় পরিচয়পত্র</h3>
+                        <p class="text-gray-600">নিচের ফরমে আপনার জাতীয় পরিচয়পত্র নম্বর ও জন্ম তারিখ (জাতীয় পরিচয়পত্র অনুযায়ী) প্রদান করে "যাচাই করুন" বাটনে ক্লিক করলে নিবন্ধনের সময় প্রদানকৃত মোবাইল নম্বরে একটি OTP কোড SMS এর মাধ্যমে পাঠানো হবে, তা পরবর্তী OTP কোড ঘরে প্রদান করে "ভ্যাকসিন কার্ড ডাউনলোড" বাটনে ক্লিক করলে ভ্যাকসিন কার্ড সংগ্রহ করা যাবে।</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-medium mb-2">২. জন্ম নিবন্ধন সার্টিফিকেট</h3>
+                        <p class="text-gray-600">নিচের ফরমে আপনার জন্ম সনদ নম্বর ও জন্ম তারিখ (জন্ম সনদ অনুযায়ী) প্রদান করে "যাচাই করুন" বাটনে ক্লিক করলে নিবন্ধনের সময় প্রদানকৃত মোবাইল নম্বরে একটি OTP কোড SMS এর মাধ্যমে পাঠানো হবে, তা পরবর্তী OTP কোড ঘরে প্রদান করে "ভ্যাকসিন কার্ড ডাউনলোড" বাটনে ক্লিক করলে ভ্যাকসিন কার্ড সংগ্রহ করা যাবে।</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-medium mb-2">৩. পাসপোর্ট (বাংলাদেশি/বিদেশি)</h3>
+                        <p class="text-gray-600">নিচের ফরমে আপনার পাসপোর্ট নম্বর ও জন্ম তারিখ (পাসপোর্ট অনুযায়ী) প্রদান করে "যাচাই করুন" বাটনে ক্লিক করলে নিবন্ধনের সময় প্রদানকৃত মোবাইল নম্বরে একটি OTP কোড SMS এর মাধ্যমে পাঠানো হবে, তা পরবর্তী OTP কোড ঘরে প্রদান করে "ভ্যাকসিন কার্ড ডাউনলোড" বাটনে ক্লিক করলে ভ্যাকসিন কার্ড সংগ্রহ করা যাবে।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <!-- Footer -->
+        <footer class="bg-[#F26640] py-16">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-between items-center md:flex-row flex-col">
+                    <!-- Left Column -->
+                    <div class="text-white  text-center">
+                        <div class="p-5 w-[13rem]">
+                            <img src="images/logo.png" alt="Logo">
+                        </div>
+                        <p class="font-medium">প্রযুক্তির সহায়তা</p>
+                        <p>ঢাকা তথ্য-সার্ভিসেস</p>
+                        <p>জনপ্রিয় সরকারী প্রতিষ্ঠানসমূহ</p>
+                    </div>
+    
+                    <!-- Middle Column -->
+                    <div class="text-center">
+                        <p class="text-white md:mb-4 mt-4">কারিগরি সহায়তায় - তথ্য ও যোগাযোগ প্রযুক্তি অধিদপ্তর</p>
+                        <div class="flex justify-center gap-2">
+                            <img src="images/ict.png" alt="ict-division">
+                        </div>
+                    </div>
+    
+                    <!-- Right Column -->
+                    <div class="text-center">
+                        <p class="text-white md:mb-4 mt-4">সৈবসেবী সহযোগিতায় -</p>
+                        <div class="flex justify-center gap-2">
+                            <img src="images/org.png" alt="Partner Organizations" class="h-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <!-- Add this script before closing body tag -->
+        <script src="index.js"></script>
+
+
+</body>
+</html> 
